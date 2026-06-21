@@ -1,0 +1,61 @@
+[general]
+import = [
+#"~/.config/alacritty/base16-dark.toml",
+"~/.config/alacritty/keybindings.toml",
+#"alacritty-theme/themes/gruvbox_dark.toml",
+] 
+
+working_directory  = "C:/Users/morty"
+live_config_reload = true
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+padding         = { x = 9, y = 7 }
+dynamic_padding = true
+decorations     = "None"
+opacity         = 0.9
+dynamic_title   = true
+
+[scrolling]
+history     = 1000
+multiplier  =    3
+
+[font]
+normal       = { family = "JetBrainsMono Nerd Font Mono", style = "Regular"     }
+bold         = { family = "JetBrainsMono Nerd Font Mono", style = "Bold"        }
+italic       = { family = "JetBrainsMono Nerd Font Mono", style = "Italic"      }
+bold_italic  = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
+# Default:     11.25
+size         = 11.25
+# Deafult:     { x = 0, y = 0 } 
+offset       = { x = 0, y = 0 }
+# Deafult:     { x = 0, y = 0 } 
+glyph_offset = { x = 1, y = 1 }
+
+[colors.primary]
+foreground      = "#BBBBBB"
+background      = "#111111"
+
+[colors.cursor]
+text            = "#444444"
+cursor          = "#777777"
+
+[colors.vi_mode_cursor]
+text            = "#444444"
+cursor          = "#777777"
+
+[colors.search]
+matches       = { foreground = "#181818", background = "#ac4242" }
+focused_match = { foreground = "#181818", background = "#f4bf75" }
+
+[colors.hints]
+start         = { foreground = "#181818", background = "#f4bf75" }
+end           = { foreground = "#181818", background = "#ac4242" }
+
+[terminal]
+# shell = "<string>" | { program = "<string>", args = ["<string>",] }
+shell = "pwsh"
+# osc52 = "Disabled" | "OnlyCopy" | "OnlyPaste" | "CopyPaste"
+

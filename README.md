@@ -1,0 +1,3 @@
+#### %APPDATA%
+
+git remote -v
