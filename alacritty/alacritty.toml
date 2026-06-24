@@ -1,12 +1,18 @@
 [general]
-import = [
-#"~/.config/alacritty/base16-dark.toml",
-"~/.config/alacritty/keybindings.toml",
-#"alacritty-theme/themes/gruvbox_dark.toml",
-] 
-
+#import = [
+#  #"~/.config/alacritty/base16-dark.toml",
+#  "~/.config/alacritty/keybindings.toml",
+#  #"alacritty-theme/themes/gruvbox_dark.toml",
+#] 
 working_directory  = "C:/Users/morty"
 live_config_reload = true
+
+[keyboard]
+bindings = [
+  { key = "v", mods = "Control",       action = "ReceiveChar" },
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "C", mods = "Control|Shift", action = "Copy"  },
+]
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"
