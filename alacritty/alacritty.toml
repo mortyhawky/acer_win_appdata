@@ -9,10 +9,30 @@ live_config_reload = true
 
 [keyboard]
 bindings = [
-  { key = "v", mods = "Control",       action = "ReceiveChar" },
-  { key = "V", mods = "Control|Shift", action = "Paste" },
-  { key = "C", mods = "Control|Shift", action = "Copy"  },
+{ key = "j", mods = "Control", chars = "\u001b[1;2P" },
+#{ key = "L", mods = "Control|Shift", chars = "l" },
 ]
+
+#[keyboard]
+#bindings = [
+#  { key = "J", mods = "Control", action = "ReceiveChar", chars = "\u001b[25~" }
+#]
+
+#[keyboard]
+# bindings = [{ <key>, <mods>, <mode>, <command> | <chars> | <action> },]
+# To unset a default binding, you can use the action "ReceiveChar", 
+# to remove it or "None" to inhibit any action.
+
+#bindings = [
+#  #{ key = "v", mods = "Control",       mode = "AppCursor", action = "ReceiveChar" },
+#  { mods = "Control", key  = "v",        
+#    mode = "AppCursor|Appkeypad|Search|Alt|Vi", 
+#    action = "None"  
+#  },
+#
+#  { key = "V", mods = "Control|Shift", mode = "AppCursor", action = "Paste"       },
+#  { key = "C", mods = "Control|Shift", mode = "AppCursor", action = "Copy"        },
+#]
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"
@@ -21,9 +41,9 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 padding         = { x = 9, y = 7 }
 dynamic_padding = true
 decorations     = "None"
-opacity         = 0.9
+opacity         = 0.8
 dynamic_title   = true
-
+   
 [scrolling]
 history     = 1000
 multiplier  =    3
@@ -41,12 +61,12 @@ offset       = { x = 0, y = 0 }
 glyph_offset = { x = 1, y = 1 }
 
 [colors.primary]
-foreground      = "#BBBBBB"
-background      = "#111111"
+foreground      = "#8899AA"
+background      = "#221100"
 
 [colors.cursor]
-text            = "#444444"
-cursor          = "#777777"
+text            = "#883333"
+cursor          = "#338833"
 
 [colors.vi_mode_cursor]
 text            = "#444444"
@@ -60,8 +80,15 @@ focused_match = { foreground = "#181818", background = "#f4bf75" }
 start         = { foreground = "#181818", background = "#f4bf75" }
 end           = { foreground = "#181818", background = "#ac4242" }
 
+[cursor]
+style            = { shape = "Block", blinking = "On" }
+blink_interval   = 750
+blink_timeout    = 5
+unfocused_hollow = true
+thickness        = 0.12
+
 [terminal]
 # shell = "<string>" | { program = "<string>", args = ["<string>",] }
 shell = "pwsh"
 # osc52 = "Disabled" | "OnlyCopy" | "OnlyPaste" | "CopyPaste"
-
+osc52 = "Disabled"

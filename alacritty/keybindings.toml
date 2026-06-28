@@ -1,8 +1,8 @@
 # keybindings.toml
 
-[keyboard]
-bindings = [
-  { key = "V", mods = "Control",       action = "" },
-  { key = "V", mods = "Control|Shift", action = "Paste" },
-  { key = "C", mods = "Control|Shift", action = "Copy"  },
-]
+#[keyboard]
+#bindings = [
+#  { key = "V", mods = "Control",       action = "" },
+#  { key = "V", mods = "Control|Shift", action = "Paste" },
+#  { key = "C", mods = "Control|Shift", action = "Copy"  },
+#]
