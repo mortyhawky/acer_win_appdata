@@ -9,8 +9,10 @@ live_config_reload = true
 
 [keyboard]
 bindings = [
-{ key = "j", mods = "Control", chars = "\u001b[1;2P" },
-#{ key = "L", mods = "Control|Shift", chars = "l" },
+# Ctrl + h sends F13
+{ key = "h", mods = "Control", chars = "\u001b[1;2P" },
+# Ctrl + j sends F14
+{ key = "j", mods = "Control", chars = "\u001b[1;2Q" },
 ]
 
 #[keyboard]
