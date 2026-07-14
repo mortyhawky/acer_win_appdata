@@ -15,18 +15,19 @@ mark l a:/linux/
 mark r c:/
 mark w a:/win/
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""  OPTIONS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set vicmd=nvim
 set relativenumber
 
-if $VIFM_ADMIN == '1'
-    set vifminfo-=options
-    colorscheme dmilith-root
-else
-    colorscheme istib-solarized-dark
-endif
+""__""if $VIFM_ADMIN == '1'
+""__""    set vifminfo-=options
+""__""    colorscheme dmilith-root
+""__""else
+""__""    colorscheme istib-solarized-dark
+""__""endif
 
 " Filter-out build artifacts and temporary files
  filter {*.DAT*, ntuser.ini, desktop.ini}
@@ -357,8 +358,9 @@ set grepprg="grep -n -H -I -r -s %i %a %s"
 " program.  There is also %FOREGROUND, which is useful for entering passwords.
 
 " Pdf
-filextype {*.pdf},<application/pdf> zathura %c %i, apvlv %c, xpdf %c
-fileviewer {*.pdf},<application/pdf> pdftotext -nopgbrk %c -
+filextype {*.pdf},<application/pdf> okular.exe %c %i, apvlv %c, xpdf %c
+"filextype {*.pdf},<application/pdf> zathura %c %i, apvlv %c, xpdf %c
+"fileviewer {*.pdf},<application/pdf> pdftotext -nopgbrk %c -
 
 " PostScript
 filextype {*.ps,*.eps,*.ps.gz},<application/postscript>
